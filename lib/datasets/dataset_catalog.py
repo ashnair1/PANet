@@ -63,6 +63,19 @@ DATASETS = {
         RAW_DIR:
             _DATA_DIR + '/cityscapes/raw'
     },
+
+    'spacenet_train': {
+        IM_DIR:
+            _DATA_DIR + '/spacenet/images/train',
+        ANN_FN:
+            _DATA_DIR + '/spacenet/annotations/instances_train.json'
+    },
+    'spacenet_val': {
+        IM_DIR:
+            _DATA_DIR + '/spacenet/images/val',
+        ANN_FN:
+            _DATA_DIR + '/spacenet/annotations/instances_val.json'
+    },
     'coco_2014_train': {
         IM_DIR:
             _DATA_DIR + '/coco/images/train2014',
