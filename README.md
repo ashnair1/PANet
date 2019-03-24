@@ -64,6 +64,15 @@ python tools/test_net.py --dataset coco2017 --cfg configs/panet/e2e_panet_R-50-F
 
 Results on COCO 20017 *val* subset produced by this repository. In our paper, we used Synchronized Batch Normalization following all parameter layers. While in this repository, we fix BN layers in the backbone and use GN layers in other part. With the same set of hyper-parameters, e.g., multi-scales, this repository can produce better performance than that in our origin paper. We expect a better performance with Synchronized Batch Normalization Layer.
 
+### Docker
+Clone the repository and then build the container via the Dockerfle provided.
+
+#### Note: 
+For running the shell script to split images across multiple GPUs for inference, use the following command:
+```shell
+nvidia-docker exec container_id /workspace/PANet/run_pan_gpu.sh
+```
+
 ### Questions
 
 Please contact 'liushuhust@gmail.com'
