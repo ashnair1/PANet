@@ -24,10 +24,10 @@ If PANet is useful for your research, please consider citing:
 
 ### Disclaimer 
 
-- The origin code was implemented based on the modified version of Caffe maintained by Sensetime Research. Due to several reasons, we could not release our origin code. 
+- The original code was implemented based on the modified version of Caffe maintained by Sensetime Research. Due to several reasons, we could not release our original code. 
 - In this repository, we provide our re-implementation of PANet based on Pytorch. Note that our code is heavily based on [Detectron.pytorch](https://github.com/roytseng-tw/Detectron.pytorch). Thanks [Roy](https://github.com/roytseng-tw) for his great work!
 - Several details, e.g., weight initialization and RPN joint training, in [Detectron](https://github.com/facebookresearch/Detectron) is fairly different from our origin implementation. In this repository, we simply follow Detectron because it achieves a better baseline than the codebase used in our paper. 
-- In this repository, we test our code with BN layers in the backbone fixed and use GN in other part. We expect to achieve a better performance with Synchronized Batch Normalization Layer and train all parameter layers as what we have done in our paper. With those differences and a much better baseline, the improvement is **not** same as the one we reported. But we achieve a **better** performance than our origin implementation. 
+- In this repository, we test our code with BN layers in the backbone fixed and use GN in other part. We expect to achieve a better performance with Synchronized Batch Normalization Layer and train all parameter layers as what we have done in our paper. With those differences and a much better baseline, the improvement is **not** same as the one we reported. But we achieve a **better** performance than our original implementation. 
 - We trained with image batch size 16 using 8*P40. The performance should be similar with batch size 8.
 
 ### Installation
