@@ -45,3 +45,11 @@ def get_coco_dataset():
     ]
     ds.classes = {i: name for i, name in enumerate(classes)}
     return ds
+    
+def get_spacenet_dataset():
+    """A dummy COCO dataset that includes only the 'classes' field."""
+    ds = AttrDict()
+    classes = [
+        '__background__', 'building']
+    ds.classes = {i: name for i, name in enumerate(classes)}
+    return ds
