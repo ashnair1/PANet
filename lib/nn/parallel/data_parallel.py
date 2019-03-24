@@ -64,6 +64,7 @@ class DataParallel(Module):
         self.dim = dim
         self.module = module
         self.device_ids = device_ids
+        print("Device IDs=",self.device_ids)
         self.output_device = output_device
         if len(self.device_ids) == 1:
             self.module.cuda(device_ids[0])

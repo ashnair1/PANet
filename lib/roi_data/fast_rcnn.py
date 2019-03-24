@@ -241,9 +241,11 @@ def _expand_bbox_targets(bbox_target_data):
     inds = np.where(clss > 0)[0]
     for ind in inds:
         cls = int(clss[ind])
+        print("CLS:",cls)
         start = 4 * cls
         end = start + 4
         bbox_targets[ind, start:end] = bbox_target_data[ind, 1:]
+        print("BBOX_TARGETS:",bbox_targets)
         bbox_inside_weights[ind, start:end] = (1.0, 1.0, 1.0, 1.0)
     return bbox_targets, bbox_inside_weights
 
