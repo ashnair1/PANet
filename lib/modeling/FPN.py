@@ -50,6 +50,11 @@ def fpn_ResNet101_conv5_body():
         ResNet.ResNet101_conv5_body, fpn_level_info_ResNet101_conv5()
     )
 
+def fpn_ResNet101_conv5_body_bup():
+    return fpn(
+        ResNet.ResNet101_conv5_body, fpn_level_info_ResNet101_conv5(),
+        panet_buttomup=True
+    )
 
 def fpn_ResNet101_conv5_P2only_body():
     return fpn(
@@ -64,6 +69,12 @@ def fpn_ResNet152_conv5_body():
         ResNet.ResNet152_conv5_body, fpn_level_info_ResNet152_conv5()
     )
 
+
+def fpn_ResNet152_conv5_body_bup():
+    return fpn(
+        ResNet.ResNet152_conv5_body, fpn_level_info_ResNet152_conv5(),
+        panet_buttomup=True
+    )
 
 def fpn_ResNet152_conv5_P2only_body():
     return fpn(
