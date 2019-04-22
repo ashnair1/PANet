@@ -53,3 +53,26 @@ def get_spacenet_dataset():
         '__background__', 'building']
     ds.classes = {i: name for i, name in enumerate(classes)}
     return ds
+
+
+def get_iiai_dataset():
+    """A dummy COCO dataset that includes only the 'classes' field."""
+    ds = AttrDict()
+    
+    # 12
+    classes = ['__background__', 
+              'Planes', 
+              'Ships', 
+              'Helicopter', 
+              'Vehicles', 
+              'Buildings', 
+              'Parking Lots',  
+              'Storage Tank', 
+              'Swimming Pool', 
+              'Sports Stadium/Field', 
+              'Shipping Containers', 
+              'Crane', 
+              'Comms Towers']
+    
+    ds.classes = {i: name for i, name in enumerate(classes)}
+    return ds
