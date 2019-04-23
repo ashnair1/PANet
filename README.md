@@ -43,7 +43,7 @@ It will compile all the modules you need, including NMS, ROI_Pooing, ROI_Crop an
 
 Note that, If you use CUDA_VISIBLE_DEVICES to set gpus, make sure at least one gpu is visible when compile the code.
 
-Additionally, note that the architectures specified in CUDA ARCH matches the one in your GPU
+Additionally, note that the architectures specified in CUDA ARCH variable in `make.sh` matches the architecture of your GPU
 
 
 ### Installation
