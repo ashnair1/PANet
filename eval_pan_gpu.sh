@@ -15,7 +15,7 @@ echo "Number of GPUs available:${#gpus_available[@]}"
 CUDA_VISIBLE_DEVICES=0,3,4,7 python tools/test_net.py \
                                                 --dataset iiai \
                                                 --cfg configs/panet/e2e_panet_R-152-FPN_2x_mask.yaml \
-                                                --load_ckpt Outputs/R152_18/model_step179999.pth \
+                                                --load_ckpt Outputs/R152_18/model_iiai_res152_c18_step179999.pth \
                                                 --multi-gpu-testing #> /dev/null 2>&1 &
 
                                                 #--load_ckpt Outputs/R152_28/model_step179999.pth \
