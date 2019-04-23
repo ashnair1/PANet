@@ -43,6 +43,8 @@ It will compile all the modules you need, including NMS, ROI_Pooing, ROI_Crop an
 
 Note that, If you use CUDA_VISIBLE_DEVICES to set gpus, make sure at least one gpu is visible when compile the code.
 
+Additionally, note that the architectures specified in CUDA ARCH matches the one in your GPU
+
 
 ### Installation
 
@@ -85,14 +87,10 @@ git clone https://github.com/ash1995/PANet.git
 cd PANet
 # Build the docker image
 nvidia-docker build --no-cache -t panet_image .
-# Create a container and mount the repository 
+# Create a container and mount the repository volume
 nvidia-docker run -it -d --name=panet -v /path/to/PANet:/workspace/PANet panet_image /bin/bash
 ```
 
-
-```shell
-nvidia-docker exec container_id /workspace/PANet/run_pan_gpu.sh
-```
 #### Note: 
 For running the shell script to split images across multiple GPUs for inference, use the following command:
 ```shell
