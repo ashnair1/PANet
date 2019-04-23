@@ -66,6 +66,12 @@ To evaluate the model, simply use:
 python tools/test_net.py --dataset coco2017 --cfg configs/panet/e2e_panet_R-50-FPN_2x_mask.yaml --load_ckpt {path/to/your/checkpoint}
 ```
 
+Alternatively, you could use the shell scripts provided.
+- **train.sh**         &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Train
+- **eval_pan_gpu.sh**  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Evaluate (COCO) on multiple GPUs
+- **run_pan.sh**       &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Inference on single gpu
+- **run_pan_gpu.sh**   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - Inference on multiple GPUs
+
 ### Main Results
 
 
