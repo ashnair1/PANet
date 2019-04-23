@@ -83,7 +83,7 @@ Clone the repository and then build the container via the Dockerfle provided.
 ```shell
 git clone https://github.com/ash1995/PANet.git
 cd PANet
-# Build the docker image named panet
+# Build the docker image
 nvidia-docker build --no-cache -t panet_image .
 # Create a container and mount the repository 
 nvidia-docker run -it -d --name=panet -v /path/to/PANet:/workspace/PANet panet_image /bin/bash
