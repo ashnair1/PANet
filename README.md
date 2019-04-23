@@ -78,7 +78,7 @@ python tools/test_net.py --dataset coco2017 --cfg configs/panet/e2e_panet_R-50-F
  R-50-PANet (paper) | Mask| 16 | 2x | 42.1 | 37.8 | - 
  R-50-PANet | Mask | 16| 2x | **43.1** | **38.3** | [model](https://drive.google.com/file/d/1-pVZQ3GR6Aj7KJzH9nWoRQ-Lts8IcdMS/view?usp=sharing) 
 
-Results on COCO 20017 *val* subset produced by this repository. In our paper, we used Synchronized Batch Normalization following all parameter layers. While in this repository, we fix BN layers in the backbone and use GN layers in other part. With the same set of hyper-parameters, e.g., multi-scales, this repository can produce better performance than that in our origin paper. We expect a better performance with Synchronized Batch Normalization Layer.
+Results on COCO 2017 *val* subset produced by this repository. In our paper, we used Synchronized Batch Normalization following all parameter layers. While in this repository, we fix BN layers in the backbone and use GN layers in other part. With the same set of hyper-parameters, e.g., multi-scales, this repository can produce better performance than that in our origin paper. We expect a better performance with Synchronized Batch Normalization Layer.
 
 ### Docker
 Clone the repository and then build the container via the Dockerfle provided.
