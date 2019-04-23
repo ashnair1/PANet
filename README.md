@@ -30,6 +30,20 @@ If PANet is useful for your research, please consider citing:
 - In this repository, we test our code with BN layers in the backbone fixed and use GN in other part. We expect to achieve a better performance with Synchronized Batch Normalization Layer and train all parameter layers as what we have done in our paper. With those differences and a much better baseline, the improvement is **not** same as the one we reported. But we achieve a **better** performance than our original implementation. 
 - We trained with image batch size 16 using 8*P40. The performance should be similar with batch size 8.
 
+
+### Compilation
+Compile the CUDA code:
+```
+cd lib  # please change to this directory
+sh make.sh
+```
+If your are using Volta GPUs, uncomment this line in lib/mask.sh and remember to postpend a backslash at the line above. CUDA_PATH defaults to /usr/loca/cuda. If you want to use a CUDA library on different path, change this line accordingly.
+
+It will compile all the modules you need, including NMS, ROI_Pooing, ROI_Crop and ROI_Align. (Actually gpu nms is never used ...)
+
+Note that, If you use CUDA_VISIBLE_DEVICES to set gpus, make sure at least one gpu is visible when compile the code.
+
+
 ### Installation
 
 For environment requirements, data preparation and compilation, please refer to [Detectron.pytorch](https://github.com/roytseng-tw/Detectron.pytorch).
@@ -66,7 +80,19 @@ Results on COCO 20017 *val* subset produced by this repository. In our paper, we
 
 ### Docker
 Clone the repository and then build the container via the Dockerfle provided.
+```shell
+git clone https://github.com/ash1995/PANet.git
+cd PANet
+# Build the docker image named panet
+nvidia-docker build --no-cache -t panet_image .
+# Create a container and mount the repository 
+nvidia-docker run -it -d --name=panet -v /path/to/PANet:/workspace/PANet panet_image /bin/bash
+```
 
+
+```shell
+nvidia-docker exec container_id /workspace/PANet/run_pan_gpu.sh
+```
 #### Note: 
 For running the shell script to split images across multiple GPUs for inference, use the following command:
 ```shell
