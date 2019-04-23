@@ -3,7 +3,7 @@ MAINTAINER Ashwin Nair
 
 RUN apt-get update && apt-get install -y --no-install-recommends
 
-RUN apt-get -y install libglib2.0-0 libxrender1
+RUN apt-get -y install libglib2.0-0 libxrender1 libsm6 libxext6
 
 RUN pip --no-cache-dir install \
 	Cython
