@@ -98,6 +98,12 @@ def main():
     elif args.dataset.startswith("keypoints_coco"):
         dataset = datasets.get_coco_dataset()
         cfg.MODEL.NUM_CLASSES = 2
+    elif args.dataset.startswith("spacenet"):
+        dataset = datasets.get_spacenet_dataset()
+        cfg.MODEL.NUM_CLASSES = len(dataset.classes)
+    elif args.dataset.startswith("iiai"):
+        dataset = datasets.get_iiai_dataset()
+        cfg.MODEL.NUM_CLASSES = len(dataset.classes)
     else:
         raise ValueError('Unexpected dataset name: {}'.format(args.dataset))
 
