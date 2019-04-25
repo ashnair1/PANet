@@ -158,7 +158,10 @@ def main():
         cfg.MODEL.NUM_CLASSES = 2
     elif args.dataset == "spacenet":
         cfg.TRAIN.DATASETS = ('spacenet_train',)
-        cfg.MODEL.NUM_CLASSES = 2
+        cfg.MODEL.NUM_CLASSES = len(dataset.classes)
+    elif args.dataset == "iiai":
+        cfg.TRAIN.DATASETS = ('iiai_train',)
+        cfg.MODEL.NUM_CLASSES = len(dataset.classes)
     else:
         raise ValueError("Unexpected args.dataset: {}".format(args.dataset))
 
